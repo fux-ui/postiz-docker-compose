@@ -5,9 +5,9 @@ services:
     restart: always
     environment:
       # === Required Settings
-      MAIN_URL: 'https://postiz.fuxu2.tech'
-      FRONTEND_URL: 'https://postiz.fuxu2.tech'
-      NEXT_PUBLIC_BACKEND_URL: 'https://postiz.fuxu2.tech/api'
+      MAIN_URL: 'https://post.fuxu2.tech'
+      FRONTEND_URL: 'https://post.fuxu2.tech'
+      NEXT_PUBLIC_BACKEND_URL: 'https://post.fuxu2.tech/api'
       JWT_SECRET: "${JWT_SECRET:?Set JWT_SECRET in Coolify}"
       DATABASE_URL: "postgresql://postiz-user:${POSTIZ_DB_PASSWORD:?Set POSTIZ_DB_PASSWORD in Coolify}@postiz-postgres:5432/postiz-db-local"
       REDIS_URL: 'redis://postiz-redis:6379'

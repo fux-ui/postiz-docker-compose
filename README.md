@@ -8,7 +8,7 @@
    - `TEMPORAL_DB_PASSWORD`
 
    For existing data, use the established JWT secret and database credentials. PostgreSQL initialization variables do not rotate passwords on an existing volume. If the Postiz database password contains URL delimiters, adapt the URL to use the percent-encoded password while PostgreSQL still receives its original value.
-4. Route HTTPS for `postiz.fuxu2.tech` to the `postiz` service on internal port `5000`. In Coolify versions with a single per-service domain field, enter `https://postiz.fuxu2.tech:5000`. Point DNS at the Coolify proxy and enable the HTTP-to-HTTPS redirect. The public URL is `https://postiz.fuxu2.tech`.
+4. Route HTTPS for `post.fuxu2.tech` to the `postiz` service on internal port `5000`. In Coolify versions with a single per-service domain field, enter `https://post.fuxu2.tech:5000`. Point DNS at the Coolify proxy and enable the HTTP-to-HTTPS redirect. The public URL is `https://post.fuxu2.tech`.
 5. Deploy, check the Postiz and Temporal health status in Coolify, and open the public URL to verify TLS and the Postiz login page.
 
 Optional integration credentials can be entered in Coolify by their corresponding environment variable names in the Compose file.
