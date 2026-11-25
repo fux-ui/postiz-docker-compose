@@ -232,6 +232,9 @@ services:
       temporal-elasticsearch:
         condition: service_healthy
     environment:
+      # Coolify attaches an extra Docker network. The default bind can select the wrong interface.
+      - BIND_ON_IP=0.0.0.0
+      - TEMPORAL_ADDRESS=127.0.0.1:7233
       - DB=postgres12
       - DB_PORT=5432
       - POSTGRES_USER=temporal
